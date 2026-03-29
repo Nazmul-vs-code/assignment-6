@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='border border-red-600 p-4 text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]'>
+        <div className='border border-red-600 p-4 my-8 text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]'>
             <div className="flex mx-auto w-2/3 items-center justify-around">
 
                 <div className="border border-none border-l border-gray-400">
