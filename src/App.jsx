@@ -4,6 +4,7 @@ import About from './components/About'
 import AboutTools from './components/AboutTools'
 import Banner from './components/Banner'
 import Nav from './components/Nav'
+import Tools from './components/Tools'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Banner />
       <About />
       <AboutTools></AboutTools>
+      <Tools />
     </>
   )
 }
