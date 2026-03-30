@@ -9,6 +9,7 @@ const ProductCard = ({ product , setSelectedCarts , selectedCarts}) => {
         setIsSelected(true);
         toast.success(`${product.name} added to cart!`);
         setSelectedCarts([...selectedCarts, product]);
+        
 
     }
 

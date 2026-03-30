@@ -31,17 +31,19 @@ const AboutTools = ({ productPromise }) => {
             </div>
 
             <div className='w-[90%] mx-auto p-10'>
-                <div className='border
-             border-red-500 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 rounded-md'>
-                
-                {
-                    selectedType == 'available' ?
-                    <AvailableProducts products={products} 
-                    selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} 
-                    />
-                    : <SelectedCards selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} ></SelectedCards>
-                    
-                }
+                <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 rounded-md'>
+
+                    {
+                        selectedType == 'available' ?
+                            <AvailableProducts products={products}
+                                selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts}
+                            />
+                            :
+                            <div className="col-span-full">
+                                <SelectedCards selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} />
+                            </div>
+
+                    }
                 </div>
             </div>
         </div>
