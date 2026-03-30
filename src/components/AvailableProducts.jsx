@@ -1,12 +1,16 @@
-import React  from 'react';
+import React, { useState }  from 'react';
+import { toast } from 'react-toastify';
 
-const AvailableProducts = ({ products }) => {
+const ProductCard = ({ product }) => {
     // console.log(products, "Products found here")
+
+    const [isSelected , setIsSelected] = useState(false);
+    const handleAddToCart = () => {
+        setIsSelected(true);
+        toast.success(`${product.name} added to cart!`);
+    }
+
     return (
-
-
-        products.map(product => (
-
 
             <div className="card w-80 bg-white shadow-xl border border-gray-200 p-6 rounded-3xl mx-auto">
                 <div className="flex justify-between items-start mb-4">
@@ -38,14 +42,36 @@ const AvailableProducts = ({ products }) => {
 
                 </div>
 
-                <button className="btn w-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] border-none text-white text-lg rounded-3xl">
-                    Buy Now
+                <button 
+                disabled={isSelected}
+                onClick={handleAddToCart}
+                className={`btn w-full 
+                
+                ${
+                    isSelected ? "bg-green-400 "
+                   
+                   : "bg-gradient-to-r from-[#4F39F6] to-[#9514FA] border-none "
+                    }
+                    text-lg rounded-3xl text-white
+                    `
+                }>
+                    {isSelected ? "✔ Added to cart" : "Buy Now"}
                 </button>
             </div>
         )
-        )
 
 
+};
+
+
+
+const AvailableProducts = ({ products }) => {
+    return (
+        <>
+            {
+                products.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
+            }
+        </>
     );
 };
 
