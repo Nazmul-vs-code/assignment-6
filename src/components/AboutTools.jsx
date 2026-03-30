@@ -2,13 +2,12 @@ import React, { use, useState } from 'react';
 import AvailableProducts from './AvailableProducts';
 import SelectedCards from './SelectedCards';
 
-const AboutTools = ({ productPromise }) => {
+const AboutTools = ({ productPromise , selectedCarts , setSelectedCarts }) => {
     const products = use(productPromise);
 
     const [selectedType, setSelectedType] = useState('available');
     console.log(selectedType, "Selected type is here")
 
-    const [selectedCarts, setSelectedCarts] = useState([]);
 
     return (
         <div className='flex flex-col bg-gray-100 min-h-screen'>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SlBasket } from 'react-icons/sl';
 
-const Nav = () => {
+const Nav = ({selectedCarts}) => {
     return (
         <div className="navbar bg-base-100 shadow-sm w-[90%] mx-auto mt-5 ">
             <div className="navbar-start">
@@ -38,6 +38,7 @@ const Nav = () => {
             </div>
             <div className="navbar-end">
                 <button className='btn'>
+                    {selectedCarts.length}
                     <SlBasket></SlBasket>
                 </button>
                 <button className="btn">Login</button>
