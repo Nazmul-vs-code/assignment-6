@@ -7,6 +7,8 @@ import Nav from './components/Nav'
 import AvilableProducts from './components/AvailableProducts'
 import { Suspense, useState } from 'react'
 import Steps from './components/Steps'
+import Footer from './components/Footer'
+import Pricings from './components/Pricings'
 
 const fetchProducts = async () => {
   const res = await fetch('/product.json')
@@ -28,6 +30,8 @@ function App() {
         <AboutTools selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} productPromise={productPromise} />
       </Suspense>
       <Steps />
+      <Pricings />
+      <Footer />
     </>
   )
 }
