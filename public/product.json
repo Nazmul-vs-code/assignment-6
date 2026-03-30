@@ -6,7 +6,7 @@
     "price": 19,
     "period": "/mo",
     "tagType": "Pro",
-    "icon": "/src/assets/products/writing_2327400 1.png",
+    "icon": "/products/writing_2327400 1.png",
     "features": [
       { "id": "f1", "text": "Long-form Blog Writer" },
       { "id": "f2", "text": "Plagiarism Checker" },
@@ -20,7 +20,7 @@
     "price": 25,
     "period": "/mo",
     "tagType": "Popular",
-    "icon": "/src/assets/products/design-tool.png",
+    "icon": "/products/design-tool.png",
     "features": [
       { "id": "f1", "text": "Figma Source Files" },
       { "id": "f2", "text": "Commercial License" },
@@ -34,7 +34,7 @@
     "price": 35,
     "period": "/mo",
     "tagType": "Best Value",
-    "icon": "/src/assets/products/camera_8775444 1.png",
+    "icon": "/products/camera_8775444 1.png",
     "features": [
       { "id": "f1", "text": "No Attribution Needed" },
       { "id": "f2", "text": "Royalty-Free Music" },
@@ -48,7 +48,7 @@
     "price": 49,
     "period": "/mo",
     "tagType": "Pro",
-    "icon": "/src/assets/products/operation.png",
+    "icon": "/products/operation.png",
     "features": [
       { "id": "f1", "text": "100+ App Integrations" },
       { "id": "f2", "text": "Real-time Webhooks" },
@@ -62,7 +62,7 @@
     "price": 0,
     "period": "/mo",
     "tagType": "Free",
-    "icon": "/src/assets/products/portfolio.png",
+    "icon": "/products/portfolio.png",
     "features": [
       { "id": "f1", "text": "ATS Optimization" },
       { "id": "f2", "text": "AI Content Suggester" },
@@ -76,7 +76,7 @@
     "price": 22,
     "period": "/mo",
     "tagType": "New",
-    "icon": "/src/assets/products/social-media.png",
+    "icon": "/products/social-media.png",
     "features": [
       { "id": "f1", "text": "Auto-Post Scheduler" },
       { "id": "f2", "text": "Hashtag Generator" },
