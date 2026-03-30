@@ -1,12 +1,14 @@
 import React, { use, useState } from 'react';
 import AvailableProducts from './AvailableProducts';
-import AvailableCards from './AvailableCards';
+import SelectedCards from './SelectedCards';
 
 const AboutTools = ({ productPromise }) => {
     const products = use(productPromise);
 
     const [selectedType, setSelectedType] = useState('available');
     console.log(selectedType, "Selected type is here")
+
+    const [selectedCarts, setSelectedCarts] = useState([]);
 
     return (
         <div className='flex flex-col bg-gray-100 min-h-screen'>
@@ -24,17 +26,20 @@ const AboutTools = ({ productPromise }) => {
                         onClick={() => setSelectedType('cart')}
                         className={`btn
                         ${selectedType === 'cart' ? 'text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]' : ''}`
-                        }>Cart (2)</button>
+                        }>Cart ({selectedCarts.length})</button>
                 </div>
             </div>
 
             <div className='w-[90%] mx-auto p-10'>
                 <div className='border
              border-red-500 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 rounded-md'>
+                
                 {
                     selectedType == 'available' ?
-                    <AvailableProducts products={products} />
-                    : <AvailableCards></AvailableCards>
+                    <AvailableProducts products={products} 
+                    selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} 
+                    />
+                    : <SelectedCards selectedCarts={selectedCarts} setSelectedCarts={setSelectedCarts} ></SelectedCards>
                     
                 }
                 </div>
