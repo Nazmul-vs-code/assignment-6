@@ -4,7 +4,15 @@ import About from './components/About'
 import AboutTools from './components/AboutTools'
 import Banner from './components/Banner'
 import Nav from './components/Nav'
-import Tools from './components/Tools'
+import AvilableProducts from './components/AvailableProducts'
+import { Suspense } from 'react'
+
+const fetchProducts = async () => {
+  const res = await fetch('/product.json')
+  const data = await res.json()
+  return data
+}
+const productPromise = fetchProducts();
 
 function App() {
 
@@ -13,8 +21,9 @@ function App() {
       <Nav />
       <Banner />
       <About />
-      <AboutTools></AboutTools>
-      <Tools />
+      <Suspense fallback={<div>Loading products...</div>}>
+        <AboutTools productPromise={productPromise} />
+      </Suspense>
     </>
   )
 }

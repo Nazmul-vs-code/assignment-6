@@ -1,15 +1,43 @@
-import React from 'react';
+import React, { use, useState } from 'react';
+import AvailableProducts from './AvailableProducts';
+import AvailableCards from './AvailableCards';
 
-const AboutTools = () => {
+const AboutTools = ({ productPromise }) => {
+    const products = use(productPromise);
+
+    const [selectedType, setSelectedType] = useState('available');
+    console.log(selectedType, "Selected type is here")
+
     return (
-        <div className='flex  p-10 items-center justify-center bg-gray-100'>
+        <div className='flex flex-col bg-gray-100 min-h-screen'>
             <div className="mx-auto text-center w-2/5 space-y-3">
-            <h1 className='font-semibold text-3xl'>Premium Digital Tools</h1>
-            <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
-            <div className="flex items-center justify-center">
-                <button className='btn text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]'>Products</button>
-                <button className='btn'>Cart (2)</button>
+                <h1 className='font-semibold text-3xl'>Premium Digital Tools</h1>
+                <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
+                <div className="flex items-center justify-center">
+                    <button
+                        onClick={() => setSelectedType('available')}
+                        className={`btn
+                        ${selectedType === 'available' ? 'text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]' : ''}`
+                        }>Products</button>
+
+                    <button
+                        onClick={() => setSelectedType('cart')}
+                        className={`btn
+                        ${selectedType === 'cart' ? 'text-white bg-gradient-to-r from-[#4F39F6] to-[#9514FA]' : ''}`
+                        }>Cart (2)</button>
+                </div>
             </div>
+
+            <div className='w-[90%] mx-auto p-10'>
+                <div className='border
+             border-red-500 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5 rounded-md'>
+                {
+                    selectedType == 'available' ?
+                    <AvailableProducts products={products} />
+                    : <AvailableCards></AvailableCards>
+                    
+                }
+                </div>
             </div>
         </div>
     );

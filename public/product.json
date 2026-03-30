@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality blogs, emails, and ads in seconds.",
+    "price": 19,
+    "period": "/mo",
+    "tagType": "Pro",
+    "icon": "/src/assets/products/writing_2327400 1.png",
+    "features": [
+      { "id": "f1", "text": "Long-form Blog Writer" },
+      { "id": "f2", "text": "Plagiarism Checker" },
+      { "id": "f3", "text": "Multilingual Support" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "Access 5000+ premium UI and Graphic templates.",
+    "price": 25,
+    "period": "/mo",
+    "tagType": "Popular",
+    "icon": "/src/assets/products/design-tool.png",
+    "features": [
+      { "id": "f1", "text": "Figma Source Files" },
+      { "id": "f2", "text": "Commercial License" },
+      { "id": "f3", "text": "Daily New Uploads" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium Stock Assets",
+    "description": "Unlimited 4K footage, photos, and music tracks.",
+    "price": 35,
+    "period": "/mo",
+    "tagType": "Best Value",
+    "icon": "/src/assets/products/camera_8775444 1.png",
+    "features": [
+      { "id": "f1", "text": "No Attribution Needed" },
+      { "id": "f2", "text": "Royalty-Free Music" },
+      { "id": "f3", "text": "Exclusive SFX Library" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Automation Toolkit",
+    "description": "Connect your apps and automate your daily workflow.",
+    "price": 49,
+    "period": "/mo",
+    "tagType": "Pro",
+    "icon": "/src/assets/products/operation.png",
+    "features": [
+      { "id": "f1", "text": "100+ App Integrations" },
+      { "id": "f2", "text": "Real-time Webhooks" },
+      { "id": "f3", "text": "Zero-code Builder" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Resume Builder Pro",
+    "description": "Create ATS-friendly resumes that get you hired.",
+    "price": 0,
+    "period": "/mo",
+    "tagType": "Free",
+    "icon": "/src/assets/products/portfolio.png",
+    "features": [
+      { "id": "f1", "text": "ATS Optimization" },
+      { "id": "f2", "text": "AI Content Suggester" },
+      { "id": "f3", "text": "PDF/Docx Export" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Social Media Content Kit",
+    "description": "Plan, design, and schedule your social posts easily.",
+    "price": 22,
+    "period": "/mo",
+    "tagType": "New",
+    "icon": "/src/assets/products/social-media.png",
+    "features": [
+      { "id": "f1", "text": "Auto-Post Scheduler" },
+      { "id": "f2", "text": "Hashtag Generator" },
+      { "id": "f3", "text": "Analytics Dashboard" }
+    ]
+  }
+]
